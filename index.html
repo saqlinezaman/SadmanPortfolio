@@ -645,7 +645,7 @@
                 <div class="profile-container float-animation">
                     <div class="rotating-border"></div>
                     <div class="profile-image">
-                        <img src="./img/sadman.jpg" alt="Md Salim Shadman">
+                        <img src="./img/shadman-hero-image2.jpeg" alt="Md Salim Shadman">
                     </div>
                 </div>
             </div>
@@ -657,10 +657,47 @@
         <div class="max-w-7xl mx-auto px-6">
             <h2 class="text-4xl md:text-5xl font-bold text-center mb-8">About <span class="gradient-text">Me</span></h2>
             <div class="max-w-4xl mx-auto mb-12">
-                <p class="text-lg text-gray-300 text-center leading-relaxed">
-                    To enjoy a career in challenging, interesting and dynamic work environment where I will be able to develop and enhance my skills as well as gain knowledge through serving the organization. Passionate about combining engineering expertise with education and creative design.
-                </p>
-            </div>
+  <p class="text-lg text-gray-300 text-center leading-relaxed">
+    <span id="short-text">A multidisciplinary professional with experience across engineering, research, design, education, operations, digital systems, and leadership. My work combines analytical thinking with creativity, allowing me to work across technical, strategic, and communication-driven environments while building practical, user-focused, and innovation-oriented solutions...</span>
+
+    <span id="full-text" style="display:none;">With a background in Industrial and Production Engineering, I have built experience across engineering research, CAD-based design, workflow optimization, digital education, banking operations, creative media, and organizational leadership. My professional journey reflects a combination of technical expertise, adaptability, communication skills, and problem-solving across both corporate and innovation-driven environments.
+
+My technical experience includes CAD modeling, manufacturing concepts, process improvement, workflow analysis, industrial research, and digital system development. I have worked with SolidWorks, AutoCAD, CATIA, Fusion 360, Python, MATLAB, Excel, Photoshop, Illustrator, Canva, Audition, and Premiere Pro, enabling me to work at the intersection of engineering, design, technology, and communication.
+
+I have worked on research and development projects related to Bangladesh’s light engineering sector in collaboration with SME Foundation-Bangladesh, Swisscontact-Bangladesh, and Ministry of Industries-supported initiatives. My responsibilities included industrial data collection, workflow analysis, productivity improvement research, occupational health and safety communication, and technical documentation. I also served as the Lead CAD Designer for the “Food Solar Dryer” project, which resulted in a co-authored research publication in AgriEngineering by MDPI.
+
+Professionally, I have experience in both operational and educational environments. At IFIC Bank PLC, I worked on workflow management, KPI monitoring, operational efficiency improvement, and service process optimization. Alongside that, my work in digital education involved curriculum development, assessment systems, content strategy, process automation, and student-focused learning solutions.
+
+Beyond professional work, I have consistently taken leadership roles in technical, creative, and community-focused organizations. I founded CADers of IPE to promote CAD and design learning among engineering students and served in leadership positions across organizations related to research, media, youth engagement, public speaking, and student development.
+
+My achievements include recognition in National Science Fair competitions, National Science Olympiad, public speaking events, leadership programs, and innovation-focused activities. Across every field I work in, I aim to combine engineering logic, creativity, communication, and strategic thinking to create meaningful impact through technology, research, design, and innovation-driven problem solving..</span>
+  </p>
+  <div class="text-center mt-2">
+    <button id="read-more-btn" onclick="toggleBio()" 
+      style="background:none;border:none;color:#a78bfa;font-size:0.95rem;cursor:pointer;text-decoration:underline;text-underline-offset:3px;">
+      Read More
+    </button>
+  </div>
+</div>
+
+<script>
+  let bioExpanded = false;
+  function toggleBio() {
+    const short = document.getElementById('short-text');
+    const full = document.getElementById('full-text');
+    const btn = document.getElementById('read-more-btn');
+    bioExpanded = !bioExpanded;
+    if (bioExpanded) {
+      short.style.display = 'none';
+      full.style.display = 'inline';
+      btn.textContent = 'Read Less';
+    } else {
+      short.style.display = 'inline';
+      full.style.display = 'none';
+      btn.textContent = 'Read More';
+    }
+  }
+</script>
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="card-hover bg-purple-900 bg-opacity-20 p-8 rounded-xl border border-purple-800 border-opacity-30">
                     <div class="text-4xl mb-4">🎓</div>
@@ -693,7 +730,7 @@
                             <h3 class="text-2xl font-bold text-purple-400">Senior IELTS Instructor</h3>
                             <p class="text-xl text-gray-300">10 Minute School</p>
                         </div>
-                        <span class="text-gray-400 mt-2 md:mt-0">November 2024 - Present</span>
+                        <span class="text-gray-400 mt-2 md:mt-0">November 2026 - Present</span>
                     </div>
                     <ul class="space-y-2 text-gray-300">
                         <li class="timeline-item">Instructed 250+ IELTS candidates across multiple batches, delivering structured lessons and personalized support</li>
