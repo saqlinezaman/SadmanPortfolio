@@ -11,6 +11,7 @@
         * {
             font-family: 'Inter', sans-serif;
         }
+        
 
         .gradient-text {
             background: linear-gradient(135deg, #9333ea 0%, #6b21a8 100%);
@@ -75,7 +76,12 @@
             background: #9333ea;
             transition: width 0.3s ease;
         }
-
+        .nav-link.active-nav {
+    color: #a855f7;
+}
+.nav-link.active-nav::after {
+    width: 100%;
+}
         .nav-link:hover::after { width: 100%; }
 
         .blob {
@@ -1117,12 +1123,14 @@ Achieved a student rating of 4.98/5, the highest across all 10MS EC branches, hi
                                 <p>Industrial Engineer · Researcher</p>
                             </div>
                         </div>
-                        <a href="blog-post.html" class="blog-read-more">
-                            Read Full Article
-                            <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                            </svg>
-                        </a>
+                                <div class="my-6">
+                                        <a href="blog-post.html"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="inline-block w-full sm:w-auto px-10 py-3 bg-white text-purple-900 rounded-lg hover:text-white hover:bg-[#7D29C6] transition duration-300 text-center">
+                                            View My Full Portfolio
+                                        </a>
+                                </div>
                     </div>
                 </div>
             </div>
@@ -1173,7 +1181,7 @@ Achieved a student rating of 4.98/5, the highest across all 10MS EC branches, hi
                     </svg>
                 </a>
             </div>
-            <p class="text-gray-400 mt-6">&copy; 2024 Md Salim Shadman. All rights reserved.</p>
+            <p class="text-gray-400 mt-6">&copy; 2026 Md Salim Shadman. All rights reserved.</p>
             <p class="text-purple-400 mt-2">Industrial Engineer | IELTS Instructor | Researcher</p>
         </div>
     </footer>
@@ -1260,6 +1268,24 @@ Achieved a student rating of 4.98/5, the highest across all 10MS EC branches, hi
                 });
             });
         });
+        // Nav active link on scroll
+const navSections = ['home','about','experience','skills','research','portfolio','contact'];
+
+window.addEventListener('scroll', () => {
+    let current = '';
+    navSections.forEach(id => {
+        const el = document.getElementById(id);
+        if (el && window.scrollY >= el.offsetTop - 100) current = id;
+    });
+
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.classList.remove('active-nav');
+        const href = link.getAttribute('href');
+        if (href === '#' + current || href === 'index.html#' + current) {
+            link.classList.add('active-nav');
+        }
+    });
+});
     </script>
 </body>
 </html>

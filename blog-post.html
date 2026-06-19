@@ -16,7 +16,12 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-
+        .nav-link.active-nav {
+    color: #a855f7;
+}
+.nav-link.active-nav::after {
+    width: 100%;
+}
         .nav-link {
             position: relative;
             transition: color 0.3s ease;
@@ -913,6 +918,24 @@
             if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         });
     });
+    // Nav active link on scroll
+const navSections = ['home','about','experience','skills','research','portfolio','contact'];
+
+window.addEventListener('scroll', () => {
+    let current = '';
+    navSections.forEach(id => {
+        const el = document.getElementById(id);
+        if (el && window.scrollY >= el.offsetTop - 100) current = id;
+    });
+
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.classList.remove('active-nav');
+        const href = link.getAttribute('href');
+        if (href === '#' + current || href === 'index.html#' + current) {
+            link.classList.add('active-nav');
+        }
+    });
+});
 </script>
 </body>
 </html>
